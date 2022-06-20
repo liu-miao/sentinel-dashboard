@@ -1,0 +1,41 @@
+{
+  "properties": [
+    {
+      "name": "spring.cloud.nacos.password",
+      "type": "java.lang.String",
+      "description": "nacos password to authenticate."
+    },
+    {
+      "name": "spring.cloud.nacos.namespace",
+      "type": "java.lang.String",
+      "description": "nacos namespace to authenticate."
+    },
+    {
+      "name": "spring.cloud.nacos.server-addr",
+      "type": "java.lang.String",
+      "description": "nacos server address.",
+      "defaultValue": "localhost:8848"
+    },
+    {
+      "name": "spring.cloud.nacos.username",
+      "type": "java.lang.String",
+      "description": "nacos userName to authenticate."
+    },
+    {
+      "name": "sentinel.dashboard.version",
+      "type": "java.lang.String",
+      "description": "Description for sentinel.dashboard.version."
+    },
+    {
+      "name": "auth.password",
+      "type": "java.lang.String",
+      "description": "Description for auth.password."
+    },
+    {
+      "name": "auth.username",
+      "type": "java.lang.String",
+      "description": "Description for auth.username."
+    }
+  ],
+  "hints": []
+}
