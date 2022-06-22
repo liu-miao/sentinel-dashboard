@@ -444,9 +444,8 @@ public class GatewayFlowRuleController {
     private boolean publishRules(String app, String ip, Integer port) {
         List<GatewayFlowRuleEntity> rules = repository.findAllByMachine(MachineInfo.of(app, ip, port));
         try {
-           rules.forEach(i->{
-               i.setIntervalSec(i.getInterval());});
-            rulePublisher.publish(app,rules, NacosConfigUtil.GATEWAY_DATA_ID_POSTFIX);
+            rules.forEach(i -> i.setIntervalSec(GatewayFlowRuleEntity.calIntervalSec(i.getInterval(), i.getIntervalUnit())));
+            rulePublisher.publish(app, rules, NacosConfigUtil.GATEWAY_DATA_ID_POSTFIX);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException();
