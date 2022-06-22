@@ -55,6 +55,8 @@ public class GatewayFlowRuleEntity implements RuleEntity {
     private Integer grade;
     private Double count;
     private Long interval;
+
+    private Long intervalSec;
     private Integer intervalUnit;
 
     private Integer controlBehavior;
@@ -268,6 +270,14 @@ public class GatewayFlowRuleEntity implements RuleEntity {
 
     public void setInterval(Long interval) {
         this.interval = interval;
+    }
+
+    public Long getIntervalSec() {
+        return intervalSec;
+    }
+
+    public void setIntervalSec(Long interval) {
+        this.intervalSec = interval;
     }
 
     public Integer getIntervalUnit() {
